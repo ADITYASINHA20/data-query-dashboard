@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import QueryInput from "./components/QueryInput";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [queryResult, setQueryResult] = useState(""); // ✅ Add this state
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"} min-h-screen flex`}>
+      <Sidebar isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-export default App
+      <div className="flex flex-col flex-grow items-center justify-center w-full p-6">
+        {/* ✅ Pass setQueryResult and queryResult */}
+        <QueryInput darkMode={darkMode} setQueryResult={setQueryResult}  />
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
