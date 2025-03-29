@@ -1,12 +1,31 @@
-# React + Vite
+Data Query Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
 
-Currently, two official plugins are available:
+This is a React-based Data Query Dashboard Prototype developed for the GrowthGear Frontend Development Internship assignment. The project simulates an AI-powered Gen AI Analytics tool, allowing users to interact with a natural language query input and visualize results.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## Expanding the ESLint configuration
+Natural Language Query Input: Users can enter business-related queries.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Query Processing Simulation: Mimics AI-powered query interpretation.
+
+Query History: Stores previous user queries for quick access.
+
+Result Visualization: Displays processed query results using charts.
+
+Loading & Error Handling: Provides feedback during query processing.
+
+Dark Mode Toggle: Allows users to switch between light and dark modes.
+
+Sidebar Navigation: Provides easy access to previous queries and options.
+
+Tech Stack
+
+Frontend: React.js
+
+State Management: Redux (for managing query states)
+
+Styling: Tailwind CSS
+
+Charting Library: Recharts (for data visualization)
